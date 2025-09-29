@@ -1,0 +1,12 @@
+{
+  "name": "file-search-vulnerable",
+  "version": "1.0.0",
+  "description": "Aplicación vulnerable a path traversal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

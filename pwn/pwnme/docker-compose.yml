@@ -1,0 +1,11 @@
+version: '3'
+services:
+  pwn:
+    build: ./chall
+    ports:
+      - 4477:4477
+    networks:
+      - default
+networks:
+  default:
+

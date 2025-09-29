@@ -1,0 +1,15 @@
+Bromita pesada
+
+Deje desbloqueada mi computadora un rato, y al volver y teclear mi contraseña, obtuve lo siguiente
+
+ADAG?9g1>b{g54{Ek0pAtZ!+
+
+Estoy seguro que teclee bien mi contraseña 
+
+
+## Resolución:
+
+Se esta usando una diferente distribución de teclado, en especifico, Devorak.
+Se tiene que buscar un conversor de qwerty a devorak y obtenemos la flag:
+
+AHAU{9u1En_u54_Dv0rAk?!}

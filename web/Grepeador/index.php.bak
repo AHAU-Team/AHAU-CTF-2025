@@ -1,0 +1,17 @@
+// Función de busqueda
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
+    $pattern = trim($_POST['pattern'] ?? '');
+    if ($pattern === '') {
+        $search_err = "Palabra vacía.";
+    } else {
+        $escaped_pattern = escapeshellarg($pattern);
+        $cmd = 'cd ' . escapeshellarg($sessdir) . ' && /bin/grep -n -i ' . $escaped_pattern . ' * 2>&1';
+        $output = [];
+        $rc = 0;
+        @exec($cmd, $output, $rc);
+        $search_out = implode("\n", $output);
+        if ($rc !== 0 && empty($search_out)) {
+            $search_err = "Sin resultados.";
+        }
+    }
+}
